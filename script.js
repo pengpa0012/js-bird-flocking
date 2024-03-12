@@ -39,7 +39,10 @@ function animate() {
     } else {
       el.x -= el.speed
     }
-  
+
+    el.y += Math.random() < 0.5 ? 1.5 : -1.5
+    el.y = Math.max(0, Math.min(canvas.height, el.y))
+    
     // setting direction
     if (el.x + 10 >= canvas.width) {
       el.direction = -1
